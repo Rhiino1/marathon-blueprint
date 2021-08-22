@@ -1,0 +1,16 @@
+@font-face {
+  font-family: windows;
+  src: url(../../../images/WINDOWS_REGULAR.TTF);
+}
+
+* {
+  font-family: windows;
+  font-size: 100%;
+  font-size: 5rem;
+}
+
+.bg {
+  width: 1920px;
+  height: 1080px;
+  background: url('../../../images/espera_1.png')
+}
