@@ -29,3 +29,17 @@ const nextRunsListSchedule = nodecg.Replicant('nextRunsListSchedule', {
 	defaultValue: [],
 	persistent: false
 });
+
+const tokenLinks = nodecg.Replicant('tokenLinks', {
+	defaultValue: ['', '']
+});
+
+const timer = nodecg.Replicant('timer', {
+	defaultValue: {
+		hours: `00`,
+		minutes: `00`,
+		seconds: `00`,
+		tenthseconds: `0`,
+	},
+	persistent: false
+})

@@ -8,4 +8,5 @@ module.exports = function (nodecg) {
 
 	require('./util/replicant-declarator');
 	require('./horarioAPI')
+	require('./timer');
 }
