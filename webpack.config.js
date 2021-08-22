@@ -7,7 +7,8 @@ const dashboardConfig = {
 	},
 	output: {
 		filename: '[name].js',
-		path: path.join(__dirname, 'dashboard')
+		path: path.join(__dirname, 'dashboard'),
+		assetModuleFilename: 'images/[hash][ext]'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -18,17 +19,15 @@ const dashboardConfig = {
 	],
 	module: {
 		rules: [{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					'css-loader'
-				]
-			},
-			{
-				test: /\.(png|jpg|gif)$/i,
-				use: ['file-loader'],
-			},
-		]
+			test: /\.css$/,
+			use: [
+				'style-loader',
+				'css-loader'
+			]
+		}, {
+			test: /\.(png|jpg|gif|ttf|mp4)$/i,
+			type: 'asset/resource'
+		}, ]
 	},
 	mode: 'production'
 };
@@ -39,7 +38,8 @@ const graphicsConfig = {
 	},
 	output: {
 		filename: '[name].js',
-		path: path.join(__dirname, 'graphics')
+		path: path.join(__dirname, 'graphics'),
+		assetModuleFilename: 'images/[hash][ext]'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -57,7 +57,7 @@ const graphicsConfig = {
 			]
 		}, {
 			test: /\.(png|jpg|gif|ttf|mp4)$/i,
-			use: 'file-loader?name=[name].[ext]&outputPath=./images/',
+			type: 'asset/resource'
 		}, ]
 	},
 	mode: 'production'
