@@ -55,8 +55,8 @@ function toHHMMSS(timeInSeconds) {
 async function getNextListSchedule(horarioData) {
 	nextRunsListSchedule.value = [];
 
-	let i = requestRQ.horaroCounter-1;
-	for (i; i < requestRQ.horaroCounter + 3 && i < requestRQ.horaroCounterMax; i++) {
+	let i = requestRQ.horaroCounter;
+	for (i; i < requestRQ.horaroCounter + 5 && i < requestRQ.horaroCounterMax; i++) {
 
 		let juegoC;
 		let runnerC;

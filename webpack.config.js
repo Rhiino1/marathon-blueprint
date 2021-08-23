@@ -35,6 +35,9 @@ const dashboardConfig = {
 const graphicsConfig = {
 	entry: {
 		layoutEspera: ['./src/graphics/scripts/layoutEspera.js'],
+		layout169: ['./src/graphics/scripts/layout16-9.js'],
+		layout43: ['./src/graphics/scripts/layout4-3.js'],
+		layoutDs: ['./src/graphics/scripts/layoutDs.js'],
 	},
 	output: {
 		filename: '[name].js',
@@ -46,6 +49,21 @@ const graphicsConfig = {
 			filename: 'layoutEspera.html',
 			template: './src/graphics/layoutEspera.html',
 			chunks: ['layoutEspera']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layout16-9.html',
+			template: './src/graphics/layout16-9.html',
+			chunks: ['layout169']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layout4-3.html',
+			template: './src/graphics/layout4-3.html',
+			chunks: ['layout43']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layoutDs.html',
+			template: './src/graphics/layoutDs.html',
+			chunks: ['layoutDs']
 		}),
 	],
 	module: {

@@ -38,6 +38,21 @@
         "file": "layoutEspera.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "layout16-9.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "layout4-3.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "layoutDs.html",
+        "width": 1920,
+        "height": 1080
       }
     ]
   },
