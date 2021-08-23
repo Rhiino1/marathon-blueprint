@@ -62,11 +62,13 @@ async function getNextListSchedule(horarioData) {
 		let runnerC;
 		let categoriaC;
 		let plataformaC;
+		let yearC;
 		let hiddenRunnerC;
 		let gameIndex;
 		let runnerIndex;
 		let categoriaIndex;
 		let plataformaIndex;
+		let yearIndex;
 		let hiddenRunnerIndex;
 
 		for (let index = 0; index < horarioData.data.columns.length; index++) {
@@ -81,6 +83,9 @@ async function getNextListSchedule(horarioData) {
 			}
 			if (horarioData.data.columns[index] === 'Plataforma') {
 				plataformaC = index;
+			}
+			if (horarioData.data.columns[index] === 'hiddenYear') {
+				yearC = index;
 			}
 			if (horarioData.data.columns[index] === 'hiddenRunner') {
 				hiddenRunnerC = index;
@@ -112,6 +117,11 @@ async function getNextListSchedule(horarioData) {
 			plataforma = 'TBD'
 		}
 
+		let year = horarioData.data.items[i].data[yearC];
+		if (!year) {
+			year = 'TBD'
+		}
+
 		let estimado = horarioData.data.items[i].length_t;
 
 		if (game.startsWith('[')) {
@@ -138,6 +148,11 @@ async function getNextListSchedule(horarioData) {
 		if (plataforma.startsWith('[')) {
 			plataformaIndex = plataforma.search(']');
 			plataforma = plataforma.substring(1, plataformaIndex);
+		}
+
+		if (year.startsWith('[')) {
+			yearIndex = year.search(']');
+			year = year.substring(1, yearIndex);
 		}
 
 		if (game.startsWith('**')) {
@@ -170,6 +185,12 @@ async function getNextListSchedule(horarioData) {
 			plataforma = plataforma.substring(1, horarioData.data.items[i].data[plataformaC].length - 1);
 		}
 
+		if (year.startsWith('**')) {
+			year = year.substring(2, horarioData.data.items[i].data[yearC].length - 2);
+		} else if (plataforma.startsWith('*')) {
+			year = year.substring(1, horarioData.data.items[i].data[yearC].length - 1);
+		}
+
 		let runnersName = runner.split(', ');
 		let runnersTwitch = runnerTwitch.split(', ');
 
@@ -192,9 +213,9 @@ async function getNextListSchedule(horarioData) {
 			runners: runners,
 			categoria: categoria,
 			estimado: toHHMMSS(estimado),
-			plataforma: plataforma
+			plataforma: plataforma,
+			year: year
 		});
-
 		// console.log(nextRunsListSchedule.value);
 	}
 }
@@ -229,11 +250,13 @@ async function generalScheduleFunction(horarioData, count = 0) {
 	let runnerC;
 	let categoriaC;
 	let plataformaC;
+	let yearC;
 	let hiddenRunnerC;
 	let gameIndex;
 	let runnerIndex;
 	let categoriaIndex;
 	let plataformaIndex;
+	let yearIndex;
 	let hiddenRunnerIndex;
 
 	for (let index = 0; index < horarioData.data.columns.length; index++) {
@@ -248,6 +271,9 @@ async function generalScheduleFunction(horarioData, count = 0) {
 		}
 		if (horarioData.data.columns[index] === 'Plataforma') {
 			plataformaC = index;
+		}
+		if (horarioData.data.columns[index] === 'hiddenYear') {
+			yearC = index;
 		}
 		if (horarioData.data.columns[index] === 'hiddenRunner') {
 			hiddenRunnerC = index;
@@ -279,6 +305,11 @@ async function generalScheduleFunction(horarioData, count = 0) {
 		plataforma = 'TBD'
 	}
 
+	let year = horarioData.data.items[requestRQ.horaroCounter].data[yearC];
+	if (!year) {
+		year = 'TBD'
+	}
+
 	let estimado = horarioData.data.items[requestRQ.horaroCounter].length_t;
 
 	if (game.startsWith('[')) {
@@ -305,6 +336,11 @@ async function generalScheduleFunction(horarioData, count = 0) {
 	if (plataforma.startsWith('[')) {
 		plataformaIndex = plataforma.search(']');
 		plataforma = plataforma.substring(1, plataformaIndex);
+	}
+
+	if (year.startsWith('[')) {
+		yearIndex = year.search(']');
+		year = year.substring(1, yearIndex);
 	}
 
 	if (game.startsWith('**')) {
@@ -337,6 +373,12 @@ async function generalScheduleFunction(horarioData, count = 0) {
 		plataforma = plataforma.substring(1, horarioData.data.items[requestRQ.horaroCounter].data[plataformaC].length - 1);
 	}
 
+	if (year.startsWith('**')) {
+		year = year.substring(2, horarioData.data.items[requestRQ.horaroCounter].data[yearC].length - 2);
+	} else if (plataforma.startsWith('*')) {
+		year = year.substring(1, horarioData.data.items[requestRQ.horaroCounter].data[yearC].length - 1);
+	}
+
 	let runnersName = runner.split(', ');
 	let runnersTwitch = runnerTwitch.split(', ');
 
@@ -358,6 +400,7 @@ async function generalScheduleFunction(horarioData, count = 0) {
 	generalRunInfo.value.category = categoria;
 	generalRunInfo.value.estimate = toHHMMSS(estimado);
 	generalRunInfo.value.platform = plataforma;
+	generalRunInfo.value.year = year;
 	generalRunInfo.value.runId = requestRQ.horaroCounter;
 
 	players.value.playing = runners.length;

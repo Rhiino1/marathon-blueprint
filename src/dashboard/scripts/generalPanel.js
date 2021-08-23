@@ -15,9 +15,9 @@ const racePlayersName = nodecg.Replicant('players');
 NodeCG.waitForReplicants(racePlayersName).then(() => {
 	racePlayersName.on('change', value => {
 		for (let i = 0; i < playersNames.length; i++) {
-			playersNames[i].value = `${value.twitch[i]}`;
+			playersNames[i].value = `${value.players[i]}`;
 			// playersNames[i].value = value.players[i];
-			playersLabels[i].textContent = `${value.twitch[i]}`;
+			playersLabels[i].value = `${value.twitch[i]}`;
 			playersTwitchLinks[i].href = `http://twitch.tv/${value.twitch[i]}`
 		}
 		showPlayers()
@@ -28,6 +28,9 @@ function showPlayers() {
 	raceModePlayersInput.firstChild.style.display = 'flex';
 	document.querySelector('.body-container').style.gridTemplateRows = '.7fr 0.5fr 1fr 1fr';
 	for (let i = 0; i < raceModePlayersInput.childNodes.length; i++) {
+		raceModePlayersInput.childNodes[i].style.display = 'none';
+	}
+	for (let i = 0; i < racePlayersName.value.playing; i++) {
 		raceModePlayersInput.childNodes[i].style.display = 'flex';
 	}
 	// setInputPlayersName()
@@ -47,6 +50,7 @@ NodeCG.waitForReplicants(generalRunInfo).then(() => {
 		generalText[1].value = value.category;
 		generalText[2].value = value.estimate;
 		generalText[3].value = value.platform;
+		generalText[4].value = value.year;
 		scheduleNumberInput.value = value.runId + 1;
 		// actualScheduleNumber.innerHTML = value.runId;
 	})
@@ -62,8 +66,10 @@ generalRunButtons[1].addEventListener('click', (e) => {
 	generalRunInfo.value.category = generalText[1].value;
 	generalRunInfo.value.estimate = generalText[2].value;
 	generalRunInfo.value.platform = generalText[3].value;
+	generalRunInfo.value.year = generalText[4].value;
 	for (let i = 0; i < playersNames.length; i++) {
-		racePlayersName.value.twitch[i] = playersNames[i].value;
+		racePlayersName.value.player[i] = playersNames[i].value;
+		racePlayersName.value.twitch[i] = playersLabels[i].value;
 	}
 })
 

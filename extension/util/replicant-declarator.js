@@ -19,7 +19,7 @@ const generalRunInfo = nodecg.Replicant('generalRunInfo', {
 		category: "category",
 		estimate: "estimate",
 		platform: "platform",
-		host: "host",
+		year: "year",
 		runId: -1
 	},
 	persistent: false

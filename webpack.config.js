@@ -38,6 +38,8 @@ const graphicsConfig = {
 		layout169: ['./src/graphics/scripts/layout16-9.js'],
 		layout43: ['./src/graphics/scripts/layout4-3.js'],
 		layoutDs: ['./src/graphics/scripts/layoutDs.js'],
+		layoutCarreras2: ['./src/graphics/scripts/layoutCarreras2.js'],
+		layoutCarreras4: ['./src/graphics/scripts/layoutCarreras4.js'],
 	},
 	output: {
 		filename: '[name].js',
@@ -64,6 +66,16 @@ const graphicsConfig = {
 			filename: 'layoutDs.html',
 			template: './src/graphics/layoutDs.html',
 			chunks: ['layoutDs']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layoutCarreras2.html',
+			template: './src/graphics/layoutCarreras2.html',
+			chunks: ['layoutCarreras2']
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layoutCarreras4.html',
+			template: './src/graphics/layoutCarreras4.html',
+			chunks: ['layoutCarreras4']
 		}),
 	],
 	module: {

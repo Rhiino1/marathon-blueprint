@@ -13,6 +13,7 @@ NodeCG.waitForReplicants(generalRunInfo, players).then(() => {
 		info[0].textContent = value.game;
 		info[2].textContent = `Categoría: ${value.category}`;
 		info[3].textContent = `Plataforma: ${value.platform}`;
-		info[4].textContent = `Estimado: ${value.estimate}`;
+		info[4].textContent = `Año: ${value.year}`;
+		info[5].textContent = `Estimado: ${value.estimate}`;
 	})
 })

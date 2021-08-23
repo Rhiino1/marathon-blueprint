@@ -287,6 +287,10 @@ input:checked+.slider:before {
 	margin-right: 15px;
 }
 
+.twitch-name-container input{
+	margin-left: 25px;
+}
+
 .player-container .button-players-container {
 	/* width: 25%; */
 	flex: 1 0 100px;
