@@ -47,7 +47,6 @@ NodeCG.waitForReplicants(generalRunInfo).then(() => {
 		generalText[1].value = value.category;
 		generalText[2].value = value.estimate;
 		generalText[3].value = value.platform;
-		generalText[4].value = value.host;
 		scheduleNumberInput.value = value.runId + 1;
 		// actualScheduleNumber.innerHTML = value.runId;
 	})
@@ -63,7 +62,6 @@ generalRunButtons[1].addEventListener('click', (e) => {
 	generalRunInfo.value.category = generalText[1].value;
 	generalRunInfo.value.estimate = generalText[2].value;
 	generalRunInfo.value.platform = generalText[3].value;
-	generalRunInfo.value.host = generalText[4].value;
 	for (let i = 0; i < playersNames.length; i++) {
 		racePlayersName.value.twitch[i] = playersNames[i].value;
 	}
