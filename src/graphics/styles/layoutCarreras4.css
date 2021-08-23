@@ -38,6 +38,36 @@
 	margin-top: 4px;
 }
 
+.games-container {
+	position: absolute;
+	left: 338px;
+	top: 22px;
+	font-size: 20px;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	width: 1582px;
+	height: 1010px;
+}
+
+/* .runner3 {
+	position: relative;
+	left: 100px;
+}
+
+.runner2 {
+	position: relative;
+	top: -8px;
+	left: 205px;
+}
+
+.runner4 {
+	position: relative;
+	top: 27px;
+	left: 77px;
+} */
+
 .info-container {
 	width: 1711px;
 	height: 35px;
