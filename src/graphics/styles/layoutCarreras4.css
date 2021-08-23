@@ -23,7 +23,7 @@
 	top: 26px;
 	display: flex;
 	flex-direction: column;
-	gap: 90px;
+	/* gap: 90px; */
 	color: white;
 	letter-spacing: 1px;
 }
@@ -31,6 +31,7 @@
 .runners-container span {
 	display: flex;
 	gap: 6px;
+	margin-bottom: 90px;
 }
 
 .runners-container span i {

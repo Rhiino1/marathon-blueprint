@@ -1,6 +1,8 @@
 import '../styles/layoutCarreras2.css';
 
 const runnersNames = document.querySelectorAll('.runner-name')
+const runners = document.querySelectorAll('.runner-js')
+const cams = document.querySelectorAll('.cam-js')
 const runnerNameContainer = document.querySelectorAll('.runner-name-container')
 const info = document.querySelectorAll('.info')
 
@@ -9,17 +11,18 @@ const players = nodecg.Replicant('players');
 
 NodeCG.waitForReplicants(generalRunInfo, players).then(() => {
 	players.on('change', (value) => {
-		runnerNameContainer.forEach(container => {
-			container.style.display = 'none';
-		})
-		runnersNames.forEach(runner => {
-			runner.textContent = '';
-		});
-		console.log(runnerNameContainer);
+		for (let i = 0; i < runnersNames.length; i++) {
+			runnerNameContainer[i].style.display = 'none';
+			runnersNames[i].textContent	= '';
+			runners[i].textContent	= '';
+			cams[i].textContent	= '';
+		}
 		for (let i = 0; i < value.playing; i++) {
 			if (runnerNameContainer[i]) {
 				runnerNameContainer[i].style.display = 'flex';
 				runnersNames[i].textContent = value.twitch[i];
+				runners[i].textContent = value.twitch[i];
+				cams[(value.playing - i)-1].textContent = value.twitch[i];
 			}
 		}
 	})
