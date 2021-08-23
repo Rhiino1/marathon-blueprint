@@ -15,9 +15,12 @@ NodeCG.waitForReplicants(generalRunInfo, players).then(() => {
 		runnersNames.forEach(runner => {
 			runner.textContent = '';
 		});
+		console.log(runnerNameContainer);
 		for (let i = 0; i < value.playing; i++) {
-			runnerNameContainer[i].style.display = 'flex';
-			runnersNames[i].textContent = value.twitch[i];
+			if (runnerNameContainer[i]) {
+				runnerNameContainer[i].style.display = 'flex';
+				runnersNames[i].textContent = value.twitch[i];
+			}
 		}
 	})
 	generalRunInfo.on('change', (value) => {
