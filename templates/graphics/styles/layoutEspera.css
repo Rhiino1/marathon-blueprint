@@ -1,0 +1,54 @@
+@font-face {
+	font-family: windows;
+	src: url(../../../images/WINDOWS_REGULAR.TTF);
+}
+
+* {
+	font-family: windows;
+	font-size: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+.bg {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background: url('../../../images/espera_1.png')
+}
+
+.next-game {
+	width: 1127px;
+	height: 61px;
+	position: absolute;
+	left: 740px;
+	top: 82px;
+	font-size: 47px;
+}
+
+.next-game-list-container {
+	width: 1454px;
+	height: 35px;
+	position: absolute;
+	left: 362px;
+	top: 1039px;
+  display: flex;
+}
+
+.next-game-list {
+	width: 288px;
+	height: 21px;
+  margin-top: 6px;
+	padding-left: 54px;
+	font-size: 18px;
+	text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.next-game-list:first-child {
+  width: 283px;
+	height: 21px;
+	padding-left: 50px;
+}

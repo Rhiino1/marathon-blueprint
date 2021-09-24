@@ -1,0 +1,105 @@
+@font-face {
+	font-family: windows;
+	src: url(../../../images/WINDOWS_REGULAR.TTF);
+}
+
+* {
+	font-family: windows;
+	font-size: 100%;
+	margin: 0;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+.bg {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background: url('../../../images/zelda_layout_carreras22.png')
+}
+
+.runners-container {
+	position: absolute;
+	left: 30px;
+	top: 137px;
+	display: flex;
+	flex-direction: column;
+	/* gap: 90px; */
+	color: white;
+	letter-spacing: 1px;
+}
+
+.runners-container span {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 91px;
+}
+
+.runners-container span i {
+	margin-top: 4px;
+}
+
+.games-container {
+	position: absolute;
+	left: 338px;
+	top: 22px;
+	font-size: 20px;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	width: 1433px;
+	height: 979px;
+}
+
+.cam1 {
+	position: relative;
+	left: 100px;
+}
+
+.cam2 {
+	position: relative;
+	top: -8px;
+	left: 205px;
+}
+
+.runner2 {
+	position: relative;
+	top: 27px;
+	left: 77px;
+}
+
+.info-container {
+	width: 1711px;
+	height: 35px;
+	position: absolute;
+	left: 104px;
+	top: 1039px;
+	display: flex;
+
+
+}
+
+.info {
+	position: relative;
+	margin-top: 6px;
+	width: 250px;
+	height: 21px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 19px;
+}
+
+.game {
+	padding-left: 36px;
+}
+
+.runner,
+.category,
+.platform,
+.year,
+.estimate {
+	width: 292px;
+	padding-left: 53px;
+}
