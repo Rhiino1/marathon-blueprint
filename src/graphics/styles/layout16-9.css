@@ -1,49 +1,162 @@
 @font-face {
-	font-family: windows;
-	src: url(../../../images/WINDOWS_REGULAR.TTF);
+    font-family: playstation;
+    src: url(../../../images/zrnic___.ttf);
 }
 
 * {
-	font-family: windows;
-	font-size: 100%;
-	margin: 0;
-	box-sizing: border-box;
+    font-family: playstation;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    letter-spacing: 2px;
 }
 
 .bg {
-	position: absolute;
-	width: 1920px;
-	height: 1080px;
-	background: url('../../../images/zelda_layout_22.png')
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background: url('../../../images/Layout_Playaton_16_9.png')
 }
 
 .info-container {
-	width: 1711px;
-	height: 35px;
-	position: absolute;
-	left: 104px;
-	top: 1039px;
-	display: flex;
-	
-
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* left: 104px; */
+    /* top: 1039px; */
+    /* display: flex; */
 }
 
 .info {
-	position: relative;
-	margin-top: 6px;
-	width: 250px;
-	height: 21px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	font-size: 19px;
+    position: relative;
+    /* margin-top: 6px; */
+    /* width: 250px; */
+    /* height: 21px; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 19px;
+}
+
+.runner-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 248px;
+    margin-left: 8px;
+    width: 335px;
+    height: 76px;
+}
+
+.runner {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.game-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 890px;
+    left: 1280px;
+    width: 633px;
+    height: 95px;
+    padding: 13px 0 0;
 }
 
 .game {
-	padding-left: 36px;
+    font-size: 3rem;
+    text-align: center;
 }
 
-.runner, .category, .platform, .year, .estimate {
-	width: 292px;
-	padding-left: 53px;
+.category-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 982px;
+    left: 1280px;
+    width: 633px;
+    height: 64px;
+}
+
+.category {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.category-icon {
+    width: 35px;
+    height: 35px;
+    color: red;
+    right: 205px;
+    background: url('../../../images/list.png');
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.platform-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 1046px;
+    left: 1623px;
+    width: 290px;
+    height: 27px;
+    padding-right: 5px;
+}
+
+.platform {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.estimate-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 910px;
+    left: 855px;
+    width: 290px;
+    height: 40px;
+    padding-right: 5px;
+}
+
+.estimate {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.timer-icon {
+    width: 50px;
+    height: 50px;
+    color: red;
+    /* width: 512px;
+    height: 512px; */
+    position: absolute;
+    right: 205px;
+    background: url('../../../images/reloj.png');
+    background-size: contain;
+}
+
+.coms-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 910px;
+    left: 357px;
+    width: 290px;
+    height: 40px;
+    padding-right: 5px;
+}
+
+.coms {
+    font-size: 2rem;
+    text-align: center;
 }

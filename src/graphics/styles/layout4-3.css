@@ -1,49 +1,51 @@
 @font-face {
-	font-family: windows;
-	src: url(../../../images/WINDOWS_REGULAR.TTF);
+    font-family: playstation;
+    src: url(../../../images/zrnic___.ttf);
 }
 
 * {
-	font-family: windows;
-	font-size: 100%;
-	margin: 0;
-	box-sizing: border-box;
+    font-family: playstation;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .bg {
-	position: absolute;
-	width: 1920px;
-	height: 1080px;
-	background: url('../../../images/zelda_layout_43.png')
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    /* background: url('../../../images/zelda_layout_43.png') */
 }
 
 .info-container {
-	width: 1711px;
-	height: 35px;
-	position: absolute;
-	left: 104px;
-	top: 1039px;
-	display: flex;
-	
-
+    width: 1711px;
+    height: 35px;
+    position: absolute;
+    left: 104px;
+    top: 1039px;
+    display: flex;
 }
 
 .info {
-	position: relative;
-	margin-top: 6px;
-	width: 250px;
-	height: 21px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	font-size: 19px;
+    position: relative;
+    margin-top: 6px;
+    width: 250px;
+    height: 21px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 19px;
 }
 
 .game {
-	padding-left: 36px;
+    padding-left: 36px;
 }
 
-.runner, .category, .platform, .year, .estimate {
-	width: 292px;
-	padding-left: 53px;
+.runner,
+.category,
+.platform,
+.year,
+.estimate {
+    width: 292px;
+    padding-left: 53px;
 }

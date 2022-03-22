@@ -1,5 +1,5 @@
 {
-  "name": "jhhd",
+  "name": "marathon-blueprint",
   "version": "0.0.0",
   "description": "",
   "homepage": "",
@@ -24,17 +24,14 @@
   ],
   "nodecg": {
     "compatibleRange": "^1.1.1",
-    "dashboardPanels": [
-      {
-        "name": "generalPanel",
-        "title": "Panel general",
-        "width": 6,
-        "file": "generalPanel.html",
-        "headerColor": "#525F78"
-      }
-    ],
-    "graphics": [
-      {
+    "dashboardPanels": [{
+      "name": "generalPanel",
+      "title": "Panel general",
+      "width": 6,
+      "file": "generalPanel.html",
+      "headerColor": "#525F78"
+    }],
+    "graphics": [{
         "file": "layoutEspera.html",
         "width": 1920,
         "height": 1080
