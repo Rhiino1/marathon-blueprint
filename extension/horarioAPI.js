@@ -77,16 +77,16 @@ async function getNextListSchedule(horarioData) {
       if (horarioData.data.columns[index] === 'Juego') {
         juegoC = index;
       }
-      if (horarioData.data.columns[index] === 'Runners') {
+      if (horarioData.data.columns[index] === 'Runner/s') {
         runnerC = index;
       }
       if (horarioData.data.columns[index] === 'Categoría') {
         categoriaC = index;
       }
-      if (horarioData.data.columns[index] === 'Consola') {
+      if (horarioData.data.columns[index] === 'Plataforma') {
         plataformaC = index;
       }
-      if (horarioData.data.columns[index] === 'Comentarista') {
+      if (horarioData.data.columns[index] === 'Comentaristas') {
         comsC = index;
       }
       if (horarioData.data.columns[index] === 'hiddenYear') {
