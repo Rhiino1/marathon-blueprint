@@ -39,18 +39,45 @@
     font-size: 19px;
 }
 
-.runner-container {
+.runner-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.runner-name-container i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.runner-container1 {
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 248px;
-    margin-left: 8px;
-    width: 335px;
+    top: 550px;
+    left: 635px;
+    width: 320px;
     height: 76px;
 }
 
-.runner {
+.runner1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.runner-container2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 550px;
+    left: 963px;
+    width: 320px;
+    height: 76px;
+}
+
+.runner2 {
     font-size: 3rem;
     text-align: center;
 }
@@ -60,11 +87,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 890px;
-    left: 1280px;
-    width: 633px;
-    height: 95px;
-    padding: 13px 0 0;
+    top: 964px;
+    left: 172px;
+    width: 767px;
+    height: 67px;
+    padding: 0px 0 0;
 }
 
 .game {
@@ -77,10 +104,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 982px;
-    left: 1280px;
+    top: 1020px;
+    left: 45px;
     width: 633px;
-    height: 64px;
+    height: 56px;
 }
 
 .category {
@@ -120,8 +147,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 910px;
-    left: 855px;
+    top: 1031px;
+    left: 696px;
     width: 290px;
     height: 40px;
     padding-right: 5px;
@@ -133,8 +160,8 @@
 }
 
 .timer-icon {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     color: red;
     /* width: 512px;
     height: 512px; */
@@ -148,9 +175,9 @@
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
-    top: 910px;
-    left: 357px;
+    justify-content: flex-start;
+    top: 668px;
+    left: 376px;
     width: 290px;
     height: 40px;
     padding-right: 5px;

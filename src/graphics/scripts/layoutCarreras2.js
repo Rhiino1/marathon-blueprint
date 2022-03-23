@@ -1,36 +1,26 @@
 import '../styles/layoutCarreras2.css';
 
-const runnersNames = document.querySelectorAll('.runner-name')
-const runners = document.querySelectorAll('.runner-js')
-const cams = document.querySelectorAll('.cam-js')
-const runnerNameContainer = document.querySelectorAll('.runner-name-container')
-const info = document.querySelectorAll('.info')
+const runner = document.querySelectorAll('.runner');
+const game = document.querySelectorAll('.game');
+const category = document.querySelectorAll('.category');
+const platform = document.querySelectorAll('.platform');
+const estimate = document.querySelectorAll('.estimate');
+const coms = document.querySelectorAll('.coms');
 
 const generalRunInfo = nodecg.Replicant('generalRunInfo');
 const players = nodecg.Replicant('players');
 
 NodeCG.waitForReplicants(generalRunInfo, players).then(() => {
-	players.on('change', (value) => {
-		for (let i = 0; i < runnersNames.length; i++) {
-			runnerNameContainer[i].style.display = 'none';
-			runnersNames[i].textContent	= '';
-			runners[i].textContent	= '';
-			cams[i].textContent	= '';
-		}
-		for (let i = 0; i < value.playing; i++) {
-			if (runnerNameContainer[i]) {
-				runnerNameContainer[i].style.display = 'flex';
-				runnersNames[i].textContent = value.twitch[i];
-				runners[i].textContent = value.twitch[i];
-				cams[(value.playing - i)-1].textContent = value.twitch[i];
-			}
-		}
-	})
-	generalRunInfo.on('change', (value) => {
-		info[0].textContent = value.game;
-		info[2].textContent = `Categoría: ${value.category}`;
-		info[3].textContent = `Plataforma: ${value.platform}`;
-		info[4].textContent = `Año: ${value.year}`;
-		info[5].textContent = `Estimado: ${value.estimate}`;
-	})
+  players.on('change', (value) => {
+    runner[0].textContent = `${value.twitch[0]}`;
+    runner[1].textContent = `${value.twitch[1]}`;
+  })
+  generalRunInfo.on('change', (value) => {
+    console.log(value);
+    game[0].textContent = value.game;
+    category[0].textContent = `${value.category}`;
+    // platform[0].textContent = `${value.platform}`;
+    estimate[0].textContent = `${value.estimate}`;
+    coms[0].textContent = `${value.coms}`;
+  })
 })
