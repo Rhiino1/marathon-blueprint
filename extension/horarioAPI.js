@@ -2,8 +2,8 @@ const nodecgApiContext = require("./util/nodecg-api-context");
 const nodecg = nodecgApiContext.get();
 const requestRQ = require('./util/requestH');
 
-const horarioUrl = "/schedules/7111co9f9y93iv7a7c"
-const horarioLink = "https://horaro.org/playathon3/playathon3"
+const horarioUrl = "/schedules/4411b453mh74yi7a3b"
+  // const horarioLink = "https://horaro.org/playathon3/playathon3"
 
 const generalRunInfo = nodecg.Replicant('generalRunInfo');
 const players = nodecg.Replicant('players');
@@ -80,13 +80,13 @@ async function getNextListSchedule(horarioData) {
       if (horarioData.data.columns[index] === 'Runner/s') {
         runnerC = index;
       }
-      if (horarioData.data.columns[index] === 'Categoría') {
+      if (horarioData.data.columns[index] === 'Categoria') {
         categoriaC = index;
       }
       if (horarioData.data.columns[index] === 'Plataforma') {
         plataformaC = index;
       }
-      if (horarioData.data.columns[index] === 'Comentaristas') {
+      if (horarioData.data.columns[index] === 'Comentarista/s') {
         comsC = index;
       }
       if (horarioData.data.columns[index] === 'hiddenYear') {
@@ -289,13 +289,34 @@ async function generalScheduleFunction(horarioData, count = 0) {
     if (horarioData.data.columns[index] === 'Runner/s') {
       runnerC = index;
     }
-    if (horarioData.data.columns[index] === 'Categoría') {
+    if (horarioData.data.columns[index] === 'Categoria') {
       categoriaC = index;
     }
     if (horarioData.data.columns[index] === 'Plataforma') {
       plataformaC = index;
     }
-    if (horarioData.data.columns[index] === 'Comentaristas') {
+    if (horarioData.data.columns[index] === 'Comentarista/s') {
+      comsC = index;
+    }
+    if (horarioData.data.columns[index] === 'hiddenYear') {
+      yearC = index;
+    }
+    if (horarioData.data.columns[index] === 'hiddenRunners') {
+      hiddenRunnerC = index;
+    }
+    if (horarioData.data.columns[index] === 'Juego') {
+      juegoC = index;
+    }
+    if (horarioData.data.columns[index] === 'Runner/s') {
+      runnerC = index;
+    }
+    if (horarioData.data.columns[index] === 'Categoria') {
+      categoriaC = index;
+    }
+    if (horarioData.data.columns[index] === 'Plataforma') {
+      plataformaC = index;
+    }
+    if (horarioData.data.columns[index] === 'Comentarista/s') {
       comsC = index;
     }
     if (horarioData.data.columns[index] === 'hiddenYear') {
