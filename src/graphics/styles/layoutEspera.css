@@ -1,29 +1,34 @@
 @font-face {
-    font-family: playstation;
-    src: url(../../../images/zrnic___.ttf);
+    font-family: heroes;
+    src: url('../../../images/Perfect DOS VGA 437.ttf');
 }
 
 * {
-    font-family: playstation;
+    font-family: heroes;
     font-size: 100%;
     margin: 0;
     box-sizing: border-box;
+    color: whitesmoke;
+    /* text-shadow: 2px 2px #000000; */
+    /* letter-spacing: 2px; */
 }
 
 .bg {
     position: absolute;
     width: 1920px;
     height: 1080px;
-    /* background: url('../../../images/espera_1.png') */
+    background: url('../../../images/Espera.png')
 }
 
 .next-game {
-    width: 1127px;
+    text-align: center;
+    width: 678px;
     height: 61px;
     position: absolute;
-    left: 740px;
-    top: 82px;
-    font-size: 47px;
+    left: 1058px;
+    top: 869px;
+    font-size: 2.3rem;
+    /* font-size: 47px; */
 }
 
 .next-game-list-container {
