@@ -1,22 +1,23 @@
 @font-face {
-    font-family: playstation;
-    src: url(../../../images/zrnic___.ttf);
+    font-family: heroes;
+    src: url('../../../images/Perfect DOS VGA 437.ttf');
 }
 
 * {
-    font-family: playstation;
+    font-family: heroes;
     font-size: 100%;
     margin: 0;
     box-sizing: border-box;
     color: whitesmoke;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
+    text-shadow: 2px 2px #000000;
 }
 
 .bg {
     position: absolute;
     width: 1920px;
     height: 1080px;
-    background: url('../../../images/Layout_Playaton_carrera_esqueleto.png')
+    background: url('../../../images/Carrera_coso.png')
 }
 
 .info-container {
@@ -55,9 +56,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 550px;
-    left: 635px;
-    width: 320px;
+    top: 663px;
+    left: 3px;
+    width: 532px;
     height: 76px;
 }
 
@@ -71,9 +72,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 550px;
-    left: 963px;
-    width: 320px;
+    top: 663px;
+    left: 1378px;
+    width: 532px;
     height: 76px;
 }
 
@@ -87,10 +88,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 964px;
-    left: 172px;
-    width: 767px;
-    height: 67px;
+    top: 785px;
+    left: 357px;
+    width: 1206px;
+    height: 130px;
     padding: 0px 0 0;
 }
 
@@ -104,8 +105,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 1020px;
-    left: 45px;
+    top: 914px;
+    left: 357px;
     width: 633px;
     height: 56px;
 }
@@ -147,11 +148,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 1031px;
-    left: 696px;
-    width: 290px;
+    top: 922px;
+    left: 992px;
+    width: 571px;
     height: 40px;
-    padding-right: 5px;
 }
 
 .estimate {
@@ -160,15 +160,16 @@
 }
 
 .timer-icon {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     color: red;
     /* width: 512px;
     height: 512px; */
-    position: absolute;
+    /* position: absolute; */
     right: 205px;
     background: url('../../../images/reloj.png');
     background-size: contain;
+    margin-right: 10px;
 }
 
 .coms-container {
@@ -176,14 +177,25 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    top: 668px;
-    left: 376px;
-    width: 290px;
+    top: 1007px;
+    left: 689px;
+    width: 550px;
     height: 40px;
-    padding-right: 5px;
 }
 
 .coms {
     font-size: 2rem;
     text-align: center;
+}
+
+.com-icon {
+    width: 73px;
+    height: 73px;
+    max-height: 73px;
+    color: red;
+    right: 205px;
+    background: url('../../../images/mic.png');
+    /* background-size: contain; */
+    background-size: cover;
+    margin-right: 10px;
 }
